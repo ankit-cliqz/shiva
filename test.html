@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shiva</title>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+<body>
+<div class="container">
+    <br /><br />
+    <div class="row row-centered">
+        <div class="col-xs-10 col-md-8 col-centered">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-lg" placeholder="Please enter the search term..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-centered">
+        <br /><br /><p> Which search engine is better ?</p><i>(Click on a link to review)</i><br /><br />
+        <div class="col-xs-10 col-md-8 col-centered" style="text-align: center">
+            <span style="margin-right: 5%">Left</span><input id="cliqzSlider" type="text" data-slider-tooltip="hide"/><span style="margin-left: 5%">Right</span>
+        </div>
+        <br /><br />
+    </div>
+    <div class="row row-centered">
+        <div class="col-xs-10 col-md-8 col-centered">
+            <div class="table-responsive">
+              <table class="table table-bordered table-md">
+                <thead>
+                  <tr class="active">
+                    <th>Search Engine 1</th>
+                    <th>Search Engine 2</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="success">
+                    <td><a href="https://cliqz.com/desktop">https://cliqz.com/desktop</a></td>
+                    <td><a href="https://cliqz.com/mobile">https://cliqz.com/mobile</a></td>
+                  </tr>
+                  <tr class="danger">
+                    <td><a href="https://cliqz.com/download">https://cliqz.com/download</a></td>
+                    <td><a href="https://cliqz.com/magazine">https://cliqz.com/magazine</a></td>
+                  </tr>
+                  <tr class="info">
+                    <td><a href="https://cliqz.com/about">https://cliqz.com/about</a></td>
+                    <td><a href="https://cliqz.com/contact">https://cliqz.com/contact</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </div>
+    <div class="row row-centered">
+        <div class="col-xs-10 col-md-8 col-centered">
+          <iframe id="cliqzReview" src="images/pikachu.png" alt="Preview" height="400px" width="100%" frameborder=1></iframe>
+        </div>
+    </div>
+</div>
+</body>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/bootstrap-slider.min.js"></script>
+<script>
+$("#cliqzSlider").slider({min  : -1, max  : 1, value: 0});
+
+$('#cliqzSlider').slider().on('change', function(e) {
+    //console.log(e.value.oldValue);
+    console.log(e.value.newValue);
+});
+
+$("a").click(function(e) {
+  e.preventDefault();
+  $("#cliqzReview").attr("src", "http://cors.io/?" + $(this).attr("href"));
+  $("a").removeClass("active");
+    $("a").parent().removeClass("active");
+  $(this).addClass("active");
+    $(this).parent().addClass("active");
+})
+</script>
+</html>

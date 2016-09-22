@@ -1,167 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    <meta charset="UTF-8">
     <title>Shiva</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="css/clean-blog.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
-    <link rel="stylesheet" href="jquery-bar-rating/dist/themes/bars-movie.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <script src="js/modernizr.custom.js"></script>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script type="text/javascript">
-     $(function() {
-        $('#example-movie').barrating('show', {
-            theme: 'bars-movie'
-        });
-
-        $('#example-movie').barrating('set', 'Mediocre');
-    });
-    </script>
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-
-    <body>
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header page-scroll">
-                    <a class="navbar-brand" href="index.html">Side By Side Comparison</a>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+<body>
+<div class="container">
+    <br /><br />
+    <div class="row row-centered">
+        <div class="col-xs-10 col-md-8 col-centered">
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-lg" placeholder="Please enter the search term..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                </div>
-                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.container -->
-        </nav>
-
-        <!-- Page Header -->
-        <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" style="background-color: #777777">
-            <div class="container">
-                <!-- Top Navigation -->
-                <header>
-                    <h1><span>Click on the search icon to start ...</span></h1>
-                </header>
-                <div class="main clearfix">
-                    <!-- Optional columns for small components -->
-                    <div class="column">
-                        <div id="sb-search" class="sb-search">
-                            <form>
-                                <input class="sb-search-input" placeholder="Enter your search term..." type="text" value="" name="search" id="search">
-                                <input class="sb-search-submit" type="submit" value="">
-                                <span class="sb-icon-search"></span>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- /container -->
-            <script src="js/classie.js"></script>
-            <script src="js/uisearch.js"></script>
-            <script>
-                new UISearch( document.getElementById( 'sb-search' ) );
-            </script>
-        </header>
-
-        <!-- Main Content -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <body>
-                        <table class="table-fill">
-                            <thead>
-                                <tr>
-                                    <th class="text-left" colspan="2" scope="colgroup", >
-                                    <select id="example-movie" name="rating", align="center">
-                                      <option value="Bad">Bad</option>
-                                      <option value="Mediocre">Mediocre</option>
-                                      <option value="Good" selected="selected">Good</option>
-                                      <option value="Awesome">Awesome</option>
-                                      <option value="Super Awesome">Super Awesome</option>
-
-                                    </select>
-                                    </th>
-                                </tr>
-                        </thead>
-                  <tbody class="table-hover">
-                    <tr>
-                        <td class="text-left">January</td>
-                        <td class="text-left">$ 50,000.00</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">February</td>
-                        <td class="text-left">$ 10,000.00</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">March</td>
-                        <td class="text-left">$ 85,000.00</td>
-                    </tr>
+        </div>
+    </div>
+    <div class="row row-centered">
+        <br /><br /><p> Which search engine is better ?</p><i>(Click on a link to review)</i><br /><br />
+        <div class="col-xs-10 col-md-8 col-centered" style="text-align: center">
+            <span style="margin-right: 5%">Left</span><input id="cliqzSlider" type="text" data-slider-tooltip="hide"/><span style="margin-left: 5%">Right</span>
+        </div>
+        <br /><br />
+    </div>
+    <div class="row row-centered">
+        <div class="col-xs-10 col-md-8 col-centered">
+            <div class="table-responsive">
+              <table class="table table-bordered table-md">
+                <thead>
+                  <tr class="active">
+                    <th>Search Engine 1</th>
+                    <th>Search Engine 2</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="success">
+                    <td><a href="https://cliqz.com/desktop">https://cliqz.com/desktop</a></td>
+                    <td><a href="https://cliqz.com/mobile">https://cliqz.com/mobile</a></td>
+                  </tr>
+                  <tr class="danger">
+                    <td><a href="https://cliqz.com/download">https://cliqz.com/download</a></td>
+                    <td><a href="https://cliqz.com/magazine">https://cliqz.com/magazine</a></td>
+                  </tr>
+                  <tr class="info">
+                    <td><a href="https://cliqz.com/about">https://cliqz.com/about</a></td>
+                    <td><a href="https://cliqz.com/contact">https://cliqz.com/contact</a></td>
+                  </tr>
                 </tbody>
-            </table>
-
-
-
+              </table>
+            </div>
+        </div>
+    </div>
+    <div class="row row-centered">
+        <div class="col-xs-10 col-md-8 col-centered">
+          <iframe id="cliqzReview" src="images/pikachu.png" alt="Preview" height="850px" width="100%" frameborder=1></iframe>
         </div>
     </div>
 </div>
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p class="copyright text-muted">Copyright &copy; Cliqz 2016</p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="vendor/jquery/jquery.min.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Contact Form JavaScript -->
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/contact_me.js"></script>
-
-<!-- Theme JavaScript -->
-<script src="js/clean-blog.min.js"></script>
-<script src="jquery-bar-rating/dist/jquery.barrating.min.js"></script>
-
 </body>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.2.0/bootstrap-slider.min.js"></script>
+<script>
+$("#cliqzSlider").slider({min  : -1, max  : 1, value: 0});
 
+$('#cliqzSlider').slider().on('change', function(e) {
+    //console.log(e.value.oldValue);
+    console.log(e.value.newValue);
+});
+
+$("a").click(function(e) {
+  e.preventDefault();
+  $("#cliqzReview").attr("src", "http://cors.io/?" + $(this).attr("href"));
+  $("a").removeClass("active");
+    $("a").parent().removeClass("active");
+  $(this).addClass("active");
+    $(this).parent().addClass("active");
+})
+</script>
 </html>

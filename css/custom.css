@@ -1,0 +1,68 @@
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.slider.slider-horizontal {
+  width: 75%;
+}
+
+.slider-handle {
+  background: url('../images/like.png') no-repeat center center;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  top: -14px;
+}
+.slider-selection {
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+th {
+    text-align: left;
+}
+
+td.active {background-color: #4cae4c !important;}
+
+/*#custom-search-input{*/
+    /*padding: 3px;*/
+    /*border: solid 1px #E4E4E4;*/
+    /*border-radius: 6px;*/
+    /*background-color: #fff;*/
+/*}*/
+
+/*#custom-search-input input{*/
+    /*border: 0;*/
+    /*box-shadow: none;*/
+/*}*/
+
+/*#custom-search-input button{*/
+    /*margin: 2px 0 0 0;*/
+    /*background: none;*/
+    /*box-shadow: none;*/
+    /*border: 0;*/
+    /*color: #666666;*/
+    /*padding: 0 8px 0 10px;*/
+    /*border-left: solid 1px #ccc;*/
+/*}*/
+
+/*#custom-search-input button:hover{*/
+    /*border: 0;*/
+    /*box-shadow: none;*/
+    /*border-left: solid 1px #ccc;*/
+/*}*/
+
+/*#custom-search-input .glyphicon-search{*/
+    /*font-size: 23px;*/
+/*}*/

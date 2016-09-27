@@ -16,7 +16,7 @@
                 <div class="input-group col-md-12">
                     <input type="text" class="form-control input-lg" placeholder="Please enter the search term..." />
                     <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
+                        <button id="cliqzSearch" class="btn btn-info btn-lg" type="button">
                             <i class="glyphicon glyphicon-search"></i>
                         </button>
                     </span>
@@ -85,5 +85,29 @@ $("a").click(function(e) {
   $(this).addClass("active");
     $(this).parent().addClass("active");
 })
+
+function make_base_auth(user, password) {
+  var tok = user + ':' + password;
+  var hash = btoa(tok);
+  return "Basic " + hash;
+}
+
+$("#cliqzSearch").click(function() {
+    $.ajax
+    ({
+          type: "GET",
+          url: "http://10.10.31.168/api/pg6?q=statue%20of%20liberty%20height%20in%20meters",
+          dataType: 'json',
+          async: true,
+          headers: {
+            "Authorization": "Basic " + btoa("cliqz" + ":" + "cliqz-245")
+          },
+          data: '',
+          success: function (){
+            alert('Thanks for your comment!');
+          }
+    });
+});
+
 </script>
 </html>
